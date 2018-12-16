@@ -1,0 +1,52 @@
+<%- include layouts/header.ejs %>
+
+        <div class="page-data">
+            
+            <form method="post" action="/students/edit/<%=data[0].usn%>">
+                <table cellpadding="11">
+                <tr>
+                    <td class="label">USN</td><td>: <input type="text" name="usn" value="<%=data[0].usn%>" required></td>
+                 </tr>
+                <tr>
+                    <td class="label">Name</td><td>: <input type="text" name="name" value="<%=data[0].name%>" required></td>
+                 </tr>
+                 <tr>
+                    <td class="label">Age</td><td>: <input type="text" name="age" value="<%=data[0].age%>" required></td>
+                 </tr>
+                 <tr>
+                    <td class="label">Gender</td><td>: <input type="text" name="gender" value="<%=data[0].gender%>" required></td>
+                 </tr>
+                 <tr>
+                    <td class="label" valign="top">Address</td>
+                    <td valign="top">: 
+                        <textarea name="address" required cols="30" rows="5"><%=data[0].address%></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Email</td><td>: <input type="text" value="<%=data[0].email%>" name="email" required></td>
+                 </tr>
+                  <tr>
+                    <td class="label">Phone</td><td>: <input type="text" name="phone" value="<%=data[0].phone%>" required></td>
+                 </tr>
+                 <tr>
+                    <td class="label">Fees</td><td>: <input type="text" name="fees" value="<%=data[0].fees%>" required></td>
+                 </tr>
+                 <tr>
+                    <td class="label">Block</td><td>: <input type="text" name="block" value="<%=data[0].block%>" required></td>
+                 </tr>
+                 <tr>
+                    <td class="label">Room No.</td><td>: <input type="text" name="roomno" value="<%=data[0].roomno%>" required></td>
+                 </tr>
+                 <tr>
+                    <td class="label"></td>
+                    <td>
+                        &nbsp; <input type="submit" name="submit" value="Save">
+                       <input type="button" name="cancel" value="Cancel" class="cancel" onClick="cancelAdd()">
+                    </td>
+                 </tr>
+                </table>
+            </form>
+            
+        </div>
+        
+<%- include layouts/footer.ejs %>
